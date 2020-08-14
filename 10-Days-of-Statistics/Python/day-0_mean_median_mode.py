@@ -1,5 +1,3 @@
-# Enter your code here. Read input from STDIN. Print output to STDOUT
-
 N = int(input())
 
 X = list(map(int, input().split()))
@@ -8,19 +6,19 @@ X = list(map(int, input().split()))
 def mean(N, X):
     mean_value = sum(X) / N
 
-    return(round(mean_value, 1))
+    return round(mean_value, 1)
 
 
 def median(N, X):
     X.sort()
 
-    if(N % 2 == 0):
-        numerator = X[int(N/2)] + X[int(N/2 - 1)]
+    if N % 2 == 0:
+        numerator = X[int(N / 2)] + X[int(N / 2 - 1)]
         median_value = numerator / 2
     else:
-        median_value = X[int(N/2)]
+        median_value = X[int(N / 2)]
 
-    return(round(median_value, 1))
+    return round(median_value, 1)
 
 
 def mode(X):
@@ -31,7 +29,7 @@ def mode(X):
 
     mode = max(count, key=count.get)
 
-    return(round(mode, 1))
+    return round(mode, 1)
 
 
 print(mean(N, X))

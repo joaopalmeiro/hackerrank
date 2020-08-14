@@ -1,10 +1,6 @@
-# Enter your code here. Read input from STDIN. Print output to STDOUT
-
 from math import factorial
 
-i = "1.09 1"
-
-i = list(map(float, i.split()))
+i = list(map(float, "1.09 1".split()))
 
 p = i[0] / sum(i)
 # p = 0.5
@@ -18,15 +14,15 @@ n = 6
 
 def binomial_pmf(x, n, p):
     f = factorial(n) / (factorial(x) * factorial(n - x))
-    b = f * p ** x * (1-p) ** (n-x)
+    b = f * p ** x * (1 - p) ** (n - x)
 
-    return(b)
+    return b
 
 
 def at_least_cdf(x, n, p):
-    b = [binomial_pmf(x_r, n, p) for x_r in range(x, n+1)]
+    b = [binomial_pmf(x_r, n, p) for x_r in range(x, n + 1)]
 
-    return(round(sum(b), 3))
+    return round(sum(b), 3)
 
 
 print(at_least_cdf(x, n, p))
