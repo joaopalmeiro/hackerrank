@@ -12,8 +12,8 @@ def second_solution(s: str) -> None:
         for char in s
     ]
 
-    final_validation = list(
-        map(any, zip(*validation_by_char))
+    final_validation = map(
+        any, zip(*validation_by_char)
     )  # "Transpose" and apply the `any` function
 
     print(*final_validation, sep="\n")
