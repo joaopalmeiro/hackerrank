@@ -4,4 +4,4 @@
 
 ## Commands
 
-- `cat python/input00.txt | python python/hex_color_code.py`
+- `cat <input>.txt | python <script>.py`
