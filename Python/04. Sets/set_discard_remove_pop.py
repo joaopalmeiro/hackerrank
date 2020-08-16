@@ -9,9 +9,9 @@ def get_expression(obj: Set[int], command: str, values: List[str]) -> str:
     stack = traceback.extract_stack()
     _, _, _, code = stack[-2]
 
-    arr_name = re.findall(r"[\w]+(?=[,\)])", code)[0]
+    st_name = re.findall(r"[\w]+(?=[,\)])", code)[0]
 
-    expression = f"{arr_name}.{command}({', '.join(values)})"
+    expression = f"{st_name}.{command}({', '.join(values)})"
 
     return expression
 
