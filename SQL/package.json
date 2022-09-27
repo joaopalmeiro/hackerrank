@@ -1,0 +1,5 @@
+{
+  "devDependencies": {
+    "sql-formatter": "10.7.2"
+  }
+}
