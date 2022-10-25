@@ -1,0 +1,7 @@
+SELECT DISTINCT
+  CITY
+FROM
+  STATION
+WHERE
+  NOT REGEXP_LIKE(CITY, '^[aeiou]', 'i') OR
+  NOT REGEXP_LIKE(CITY, '[aeiou]$', 'i')
